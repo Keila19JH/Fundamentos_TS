@@ -1,86 +1,84 @@
 import './style.css'
 
-let name: string,
-    lastName: string,
-    dateBirthday: string;
-    
-    name = 'Keila';
-    lastName= 'Gutierrez';
-    dateBirthday = '2003-11-19';
-
-    // OTRA FORMA DE DECLARAR VARIABLES
-    //let name1: string = 'Carlos'; 
-    //let lastName1: string = 'Ortega';
-    //let birthday1: string = '1995-01-22';
-
-    // Concatenación de variables
-    let fullName: string  = name + ' ' + lastName;
-   
-    // Interpolacion de strings
-    fullName = `${name} ${lastName}`;
-    
-    
-    // Salto de linea en un string \n
-    fullName = name + '\n' + lastName;
-    // console.log('salto de linea: ', fullName);
-
-    // Tabulacion en un string \t
-    fullName = name + '\t' + lastName;
-    // console.log('tabulacion: ', fullName);
+// Exercise 
+let a: number = 3; 
+let b: number = 7;
+let c: number = -10;
 
 
+let equationPlus: number = (-b + (Math.sqrt((b*b) -(4)*(a)*(c)))) / 2 * a;
+console.log(equationPlus);
 
-    // CÓMO UTILIZAR MÉTODOS E ÍNDICES
-    
-    // Método substring()
-    // Extrae un texto o caracter en un rango determinado
-    let onlyName = fullName.substring(0 , 5);
-    console.log(onlyName);
+let equationLess: number = (-b - (Math.sqrt(Math.pow(b, 2) - 4*(a*c)))) / 2 * a;
+console.log(equationLess);
 
+/* let edad: number = 39;
 
-     // Método split()
-    // Divide la cadena de un arreglo, indicando su separador
-    let onlyNameSplit: string = fullName.split('')[0];
-    console.log(onlyNameSplit);
+// Convertir números a string 
+let edadString: string = edad.toString();
 
+// Método valueof: Retorna el valor primitivo de un objeto
+let year: number = 2023;
+console.log({edad, edadString, year: year.valueOf()});
 
-    // Método toUpperCase()
-    // Convierte a MAYUSCULAS un texto
-    let fullNameUpperCase: string = fullName.toUpperCase();
-    console.log(fullNameUpperCase);
-    
+// Operadores basicos + - *
 
-    // Método toLowerCase()
-    // Convierte a minisculas un texto
-    let fullNameToLowerCase: string = fullNameUpperCase.toLowerCase();
-    console.log(fullNameToLowerCase);
+let addition: number = 10 + 20;
+//console.log(`La suma es: ${addition + 10}`);
 
+// Order of operations
 
-    // Metodo trim()
-    // Borra los espacios al inicio y al final de un texto
-    let message: string = '    Necesito que me contestes yaaaa      ';
-    console.log(message.trim());
+let operation: number = (5 + (7 *9));
+console.log(operation);
 
 
-    // Método slice()
-    //Extrae un fragmento de texto mediante el indice inicial y retorna un nuevo string
-    let pharagraph = 'Aprendiendo de Typescript y sus fundamentos.';
-    let p = pharagraph.slice(12);
-    console.log( p );
+// Método Math.min
+let number1: number = 10, number2: number = 5, number3: number = 7;
+let answer: string;
+
+if(number1 > number2 && number1 > number3){
+  answer = `El numero mayor es: ${number1}`
+}
+else{ 
+  if(number2 > number1 && number2 > number3){
+    answer = `El numero mayor es: ${number2}`
+  }
+else{
+  answer = `El numero mayor es: ${number3} `
+  }
+}
 
 
-    // Método replace()
-    //Remplaza un valor dentro de un string por otro valor
-    let text = 'Hola mundo mundo mundo mundo';
-    let replaceText = text.replace('mundo', 'a todos');
-    console.log(replaceText);
+// Método min
+let smallestNumber: number = Math.min(number1, number2, number3);
+answer = `El numero menos es ${smallestNumber}`;
 
+// Método max
+let larsgestNumber: number = Math.min(number1, number2, number3);
+answer = `El numero menos es ${larsgestNumber}`;
 
-    // Método replaceAll()
-    // Remplaza todas las coincidencias en un texto (en este caso, reemplaza todos los 'mundos', por 'a todos')
-    replaceText = text.replaceAll('mundo', 'a todos');
-    console.log(replaceText);
-    
+// Método root
+let numberSqrt: number = 16; 
+let resp: number = Math.sqrt(numberSqrt);
+console.log(resp);
+
+// Método pow
+let numberPow: number = Math.pow(2, 8);
+console.log(numberPow);
+
+// Método round, toFixed
+let decimal: number = 10.525123123123123123;
+//round
+console.log( Math.round(decimal) );
+
+//toFixed
+console.log( `fixed: ${decimal.toFixed(2)}` );
+
+//convert string to number
+let numberString: string = '1998';
+//let stringToNumber: number = Number(numberString);
+let stringToNumber: number = +numberString;
+*/ 
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -88,6 +86,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
 
   </div>
-`
-
-//setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+` ;
