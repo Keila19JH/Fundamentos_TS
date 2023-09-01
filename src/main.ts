@@ -1,84 +1,75 @@
 import './style.css'
 
-// Exercise 
-let a: number = 3; 
-let b: number = 7;
-let c: number = -10;
+// Basic Structure if(){}
+// Operadores de condicion >, <, >=, <=, ==, !=
+// PROPOSICIÓN QUE SE TIENE QUE CUMPLIR para condicionales || and && : || (se puede cumplir siempre y cuando una condición que se cumpla basta), 
+// && (se tiene que cumplir toda la condición).
 
 
-let equationPlus: number = (-b + (Math.sqrt((b*b) -(4)*(a)*(c)))) / 2 * a;
-console.log(equationPlus);
+// Basic
 
-let equationLess: number = (-b - (Math.sqrt(Math.pow(b, 2) - 4*(a*c)))) / 2 * a;
-console.log(equationLess);
+let ifExist: boolean = true;
+let number: number = 10;
 
-/* let edad: number = 39;
-
-// Convertir números a string 
-let edadString: string = edad.toString();
-
-// Método valueof: Retorna el valor primitivo de un objeto
-let year: number = 2023;
-console.log({edad, edadString, year: year.valueOf()});
-
-// Operadores basicos + - *
-
-let addition: number = 10 + 20;
-//console.log(`La suma es: ${addition + 10}`);
-
-// Order of operations
-
-let operation: number = (5 + (7 *9));
-console.log(operation);
-
-
-// Método Math.min
-let number1: number = 10, number2: number = 5, number3: number = 7;
-let answer: string;
-
-if(number1 > number2 && number1 > number3){
-  answer = `El numero mayor es: ${number1}`
+if( ifExist ){
+  console.log('Si existe');
 }
-else{ 
-  if(number2 > number1 && number2 > number3){
-    answer = `El numero mayor es: ${number2}`
-  }
+
+//if( number > 10 && number < 15 ){
+//  console.log('Esta en el rango');
+//}
+
+if( number > 10 || (number < 15 && number > 0) ){
+  console.log('Esta en el rango');
+}
+// else
+let edad: number = 20;
+
+if( edad > 60 ){
+  console.log('Abuelo');
+}
 else{
-  answer = `El numero mayor es: ${number3} `
+  console.log('joven');
+}
+
+// NESTED CONDITIONAL (IF ANIDADOS)
+let number1: number = 30;
+let number2: number = 31;
+let number3: number = 100;
+
+// What´s the max number?
+if( number1 > number2 && number1 > number3){
+  console.log(`El número mayor es: ${number1}`);
+}
+else{
+  if(number2 > number1 && number2 > number3){
+    console.log(`El número mayor es: ${number2}`);
+  }
+  else{
+  console.log(`El número mayor es: ${number3}`);
   }
 }
 
+// TERNARY CONDITIONAL (Trabaja con código de una sola linea)
+let message: string = 'not authenticated';
 
-// Método min
-let smallestNumber: number = Math.min(number1, number2, number3);
-answer = `El numero menos es ${smallestNumber}`;
+// si cumple se pone un ?, si no se cumple se pone un :
+(message === 'authenticated')
+  ? console.log('usario autenticado')
+  : console.log('usario denegado');
 
-// Método max
-let larsgestNumber: number = Math.min(number1, number2, number3);
-answer = `El numero menos es ${larsgestNumber}`;
+// Solo es por si se tiene que cumplir, no muestra más ni ejecuta más
+(message === 'authenticated')
+  && console.log('usario autenticado');
 
-// Método root
-let numberSqrt: number = 16; 
-let resp: number = Math.sqrt(numberSqrt);
-console.log(resp);
+// Exactamente igual(===) e igual (==)
+let num1: number = 8, num2: string = '8';
 
-// Método pow
-let numberPow: number = Math.pow(2, 8);
-console.log(numberPow);
+// + o number (para convertir un string a number)
+if ( num1 === +num2){
+  console.log('Si es igual');
 
-// Método round, toFixed
-let decimal: number = 10.525123123123123123;
-//round
-console.log( Math.round(decimal) );
-
-//toFixed
-console.log( `fixed: ${decimal.toFixed(2)}` );
-
-//convert string to number
-let numberString: string = '1998';
-//let stringToNumber: number = Number(numberString);
-let stringToNumber: number = +numberString;
-*/ 
+}
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
